@@ -6,6 +6,8 @@ import { LoginComponent } from './user/login/login.component';
 import { RegisterComponent } from './user/register/register.component';
 import { ProfileComponent } from './user/profile/profile.component';
 import { CatalogueComponent } from './catalogue/catalogue.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { NewItemComponent } from './items/new-item/new-item.component';
 
 
 const routes: Routes = [
@@ -38,6 +40,14 @@ const routes: Routes = [
      path: 'catalogue',
      component: CatalogueComponent,
    },
+   {
+    path: 'new-item',
+    component: NewItemComponent,
+  },
+   {
+    path: '**',
+    component: NotFoundComponent,
+  },
 ];
 
 @NgModule({

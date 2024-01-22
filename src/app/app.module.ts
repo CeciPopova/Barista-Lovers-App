@@ -11,6 +11,8 @@ import { LoginComponent } from './user/login/login.component';
 import { RegisterComponent } from './user/register/register.component';
 import { ProfileComponent } from './user/profile/profile.component';
 import { CatalogueComponent } from './catalogue/catalogue.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { NewItemComponent } from './items/new-item/new-item.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { CatalogueComponent } from './catalogue/catalogue.component';
     LoginComponent,
     RegisterComponent,
     ProfileComponent,
-    CatalogueComponent
+    CatalogueComponent,
+    NotFoundComponent,
+    NewItemComponent
   ],
   imports: [
     BrowserModule,
