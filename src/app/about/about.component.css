@@ -1,12 +1,3 @@
-#sect1 {
-    height: 600px;
-    color: 
-  #f1ecf1;
-    background-image: url("../../assets/images/header-barista-desktop.webp");
-    background-size: 50%;
-    background-size: contain;
-  
-}
 
 
 div {
@@ -18,7 +9,7 @@ div {
     width: 640px; 
     padding: 50px;
     font-family: 'Lexend Deca', sans-serif; 
-    color: #f4eef5;    
+    color: #080808;    
   }
   
 .content h1 {
@@ -27,7 +18,11 @@ div {
 }
 
 a {
-  color: #f8f7f7;
+  color: #060000;
 }
 
+h2 {
+  font-size: 49px;
+  margin-bottom: 0%;
+}
 
