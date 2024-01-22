@@ -1,0 +1,31 @@
+#sect1 {
+    height: 600px;
+    color: 
+  #f1ecf1;
+    background-image: url("../../assets/images/header-barista-desktop.webp");
+    background-size: 50%;
+    background-size: contain;
+  
+}
+
+
+div {
+  text-align: center;
+  }
+
+  li {
+    margin: auto;
+    width: 640px; 
+    padding: 50px;
+    font-family: 'Lexend Deca', sans-serif; 
+    color: #f4eef5;    
+  }
+  
+.content h1 {
+    font-size: 90px;
+    margin-bottom: 5px;
+}
+
+a {
+  color: #f8f7f7;
+}
