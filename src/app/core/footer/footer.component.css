@@ -9,8 +9,8 @@ footer {
 }
 
 footer p {
-    margin: 0;
-    padding: 0;
+    margin: 1;
+    padding: 1;
     font-size: 0.7em;
     text-align: center;
 }
