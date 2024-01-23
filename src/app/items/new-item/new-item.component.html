@@ -1,33 +1,29 @@
-<div class="container">
-    <div class="new-theme-border">
-        <div class="header-background">
-            <span>New Theme</span>
+<div id="box">
+    <section id="create-container">
+        <div class="create-container-info">
+            <!-- Do not forget to change the path to the image -->
+            <img src="../../../assets/images/header-barista-desktop.webp" alt="image">
+            <form action="#" method="" class="container-text">
+                <h2>Create Publication</h2>
+                <p>Add your own masterpiece!</p>
+                <p>
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" placeholder="Spring in the garden" name="" value="">
+                </p>
+                <p>
+                    <label for="painting-tech">Painting technique:</label>
+                    <input type="text" id="painting-tech" placeholder="Oil paints" name="" value="">
+                </p>
+                <p>
+                    <label for="picture">Art picture:</label>
+                    <input type="text" id="picture" placeholder="http://..." name="" value="">
+                </p>
+                <p>
+                    <label for="certificate">Certificate of authenticity:</label>
+                    <input type="text" id="certificate" placeholder="Yes" name="" value="">
+                </p>
+                <button class="create-btn">Create</button>
+            </form>
         </div>
-        <form>
-            <div class="new-theme-title">
-                <label for="themeName">Title <span class="red">*</span></label>
-                <input type="text" name="themeName" id="themeName">
-                <p class="error">
-                    Theme name is required.
-                </p>
-                <p class="error">
-                    Theme name must be at least 5 characters long.
-                </p>
-            </div>
-            <div class="new-theme-content">
-                <label for="postText">Post <span class="red">*</span></label>
-                <textarea type="text" name="postText" id="postText" rows="8" class="height"></textarea>
-                <p class="error">
-                    The field with your post is required.
-                </p>
-                <p class="error">
-                    Post must be at least 10 characters long.
-                </p>
-            </div>
-            <div class="new-theme-buttons">
-                <button class="cancel">Cancel</button>
-                <button class="public">Post</button>
-            </div>
-        </form>
-    </div>
+    </section>
 </div>

@@ -1,83 +1,143 @@
-form.login, form.register {
-    width: 40%;
-    margin: 2em auto 0;
+#login-container {
+    box-shadow: 0px 0px 10px 2px rgb(111, 44, 122);
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+#register-container {
+    box-shadow: 0px 0px 10px 2px rgb(111, 44, 122);
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.register-container-info {
+    background-color: #fff;
+    width: 600px;
+    height: 535px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    line-height: 1.5;
+    left: 28%;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.185);
+}
+
+.register-container-info>img {
+    width: 250px;
+    height: 470px;
+    object-fit: cover;
+    margin-top: -0.6em;
+    object-position: center;
+}
+
+.container {
+    background-color: #fff;
+    width: 600px;
+    height: 450px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    line-height: 1.5;
+    left: 28%;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.185);
+}
+
+.container>img {
+    width: 250px;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.register-container-info>.container-text>h2 {
+    padding-top: 0.4em;
+}
+
+.container-text {
+    padding: 10px 40px 10px 10px;
     text-align: center;
 }
 
-.login fieldset, .register fieldset {
-    border-radius: 0.3em;
-    padding: 0.8em;
-    background-color: #ffffff;
+.container-text>h2 {
+    font-size: 1.6rem;
+    text-align: center;
+    color: #1A2250;
 }
 
-.login h2, .register h2 {
-    padding-top: 0;
-    border-bottom: none;
+.container-text>p {
+    font-size: 14px;
+    color: #3B4169;
+    margin: 2px 0;
+    margin-bottom: 15px;
 }
 
-.login p, .register p {
-    padding-bottom: 0;
-    padding-top: 1.5rem;
-}
-
-.login input, .register input {
-    flex: 0 1 100%;
-    border: 1px solid;
-    padding: 0.3em;
-    border-left: 0.3em solid green;
-    border-top-right-radius: 0.3em;
-    border-bottom-right-radius: 0.3em;
-}
-
-.login select, .register select {
-    border-color: black;
-}
-
-.login button, .register button {
-    color: white;
+.container-text>input,
+.container-text>button {
+    width: 100%;
     border: none;
-    border-radius: 0.3em;
-    padding: 0.6em 1.2em;
-    margin-top: 1.5rem;
-    width: 60%;
-    outline: none;
+    padding: 12px;
+    border-radius: 3px;
 }
 
-.login i, .register i {
-    border: 1px solid;
-    border-right: none;
-    padding: 0.55em;
-    border-top-left-radius: 0.3em;
-    border-bottom-left-radius: 0.3em;
-    background-color: #e9ecef;
+label {
+    color: #190c4d;
+    transform: translateY(-1.5rem);
+    font-size: 14px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 700;
 }
 
-.login a, .register a {
-    color: #007bff;
+.container-text>input {
+    border: 2px solid #DE142C;
+    margin: 3px 0 7px;
+    font-size: 0.8rem;
+    color: #656880;
 }
 
-.login a:hover, .register a:hover {
+.container-text>.register-btn,
+.container-text>.login-btn {
+    background-image: linear-gradient(to right, #19BEC2, #8C1415);
+    display: block;
+    color: #fff;
+    font-size: 1rem;
     cursor: pointer;
+    margin-top: 1.6em;
+    box-shadow: 0 5px 15px #89caff94;
+    transition: box-shadow .3s ease-in-out;
 }
 
-.register .tel {
-    padding-right: 0.8em;
+.register-btn:hover,
+.login-btn:hover {
+    background-image: linear-gradient(to right, #2dd2d4, #8C1415);
+    box-shadow: none;
 }
 
-.login .field, .register .field {
-    display: flex;
-    padding-bottom: 0;
+span {
+    display: block;
+    text-align: center;
+    margin: 20px 0 0;
+    color: #BABDCB;
+    font-size: 12px;
 }
 
-/* errors  */
-
-p.error {
-    text-align: left;
-    border-radius: 0.3em;
-    color: red;
-    padding-top: 0;
+.card-no-account {
+    padding: 1rem 1rem;
+    text-align: center;
+    font-size: .875rem;
+    color: #190c4d;
 }
 
-.input-error {
-    border-left-color: red;
+.card-no-account>p>a {
+    color: #8C1415;
+}
+
+.gender {
+    margin-bottom: -1.15em;
+}
+
+.gender label:hover,
+.gender input:hover {
+    cursor: pointer;
 }

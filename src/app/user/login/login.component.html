@@ -1,32 +1,20 @@
-<div class="container">
-    <form class="login" action="" method="post">
-        <fieldset>
-            <h2>Login Form</h2>
-            <p class="field field-icon">
-                <label for="email"><span><i class="fas fa-envelope"></i></span></label>
-                <input class="input-error" type="email" name="email" id="email" placeholder="john.doe@gmail.com">
-            </p>
-            <p class="error">
-                Email is required!
-            </p>
-            <!-- <p class="error">
-                Email is not valid!
-            </p> -->
-            <p class="field field-icon">
-                <label for="password"><span><i class="fas fa-lock"></i></span></label>
-                <input type="password" name="password" id="password" placeholder="******">
-            </p>
-            <!-- <p class="error">
-                Password is required!
-            </p>
-            <p class="error">
-                Password must be at least 4 characters!
-            </p> -->
-            <button disabled>Login</button>
-            <p class="text-center">
-                Have an account?
-                <a href="/register">Register</a>
-            </p>
-        </fieldset>
-    </form>
-</div>
+ <main>
+     <section id="login-container">
+         <div class="container">
+             <!-- Do not forget to change the path to the image -->
+             <img src="../../../assets/images/header-barista-desktop.webp" alt="image">
+             <form action="#" method="" class="container-text">
+                 <h2>Login</h2>
+                 <p>Welcome, see the new masterpieces!</p>
+                 <label for="username">Username:</label>
+                 <input type="text" id="username" placeholder="ivan_00" name="">
+                 <label for="password">Password:</label>
+                 <input type="password" id="password" placeholder="*****" name="">
+                 <button class="login-btn">Login</button>
+                 <div class="card-no-account">
+                     <p>Don't have an account? <a href="/register">Sign up</a>.</p>
+                 </div>
+             </form>
+         </div>
+     </section>
+ </main>
