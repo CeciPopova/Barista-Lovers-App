@@ -146,3 +146,7 @@
 .gallery-link {
   margin-top: 2em;
 }
+
+footer {
+  display: none;
+}
