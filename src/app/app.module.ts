@@ -3,8 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FooterComponent } from './core/footer/footer.component';
-import { HeaderComponent } from './core/header/header.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './user/login/login.component';
@@ -15,12 +13,12 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { NewItemComponent } from './items/new-item/new-item.component';
 import { ItemDetailsComponent } from './items/item-details/item-details.component';
 import { EditItemComponent } from './items/edit-item/edit-item.component';
+import { CoreModule } from './core/core.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent,
-    HeaderComponent,
     HomeComponent,
     AboutComponent,
     LoginComponent,
@@ -34,7 +32,9 @@ import { EditItemComponent } from './items/edit-item/edit-item.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CoreModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
