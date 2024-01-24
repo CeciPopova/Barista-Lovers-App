@@ -2,9 +2,9 @@
     height: 650px;
     color: 
   #fff;
-    background-image: url("../../assets/images/header-barista-desktop.webp");
+    background-image: url("../../assets/images/barista-coffee-crema-cup.jpg");
     background-size: 100%;
-    background-size: contain;
+    background-size: cover;
   }
 
 div {

@@ -8,6 +8,8 @@ import { ProfileComponent } from './user/profile/profile.component';
 import { CatalogueComponent } from './catalogue/catalogue.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { NewItemComponent } from './items/new-item/new-item.component';
+import { ItemDetailsComponent } from './items/item-details/item-details.component';
+import { EditItemComponent } from './items/edit-item/edit-item.component';
 
 
 const routes: Routes = [
@@ -45,6 +47,14 @@ const routes: Routes = [
     component: NewItemComponent,
   },
    {
+    path: 'edit',
+    component: EditItemComponent,
+  },
+  {
+    path: 'details',
+    component: ItemDetailsComponent,
+  },
+  {
     path: '**',
     component: NotFoundComponent,
   },

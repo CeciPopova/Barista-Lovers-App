@@ -13,6 +13,8 @@ import { ProfileComponent } from './user/profile/profile.component';
 import { CatalogueComponent } from './catalogue/catalogue.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { NewItemComponent } from './items/new-item/new-item.component';
+import { ItemDetailsComponent } from './items/item-details/item-details.component';
+import { EditItemComponent } from './items/edit-item/edit-item.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { NewItemComponent } from './items/new-item/new-item.component';
     ProfileComponent,
     CatalogueComponent,
     NotFoundComponent,
-    NewItemComponent
+    NewItemComponent,
+    ItemDetailsComponent,
+    EditItemComponent
   ],
   imports: [
     BrowserModule,
