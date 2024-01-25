@@ -46,9 +46,29 @@
 }
 
 label {
-    color: #190c4d;
+    color: #04030a;
     transform: translateY(-1.5rem);
-    font-size: 14px;
+    font-size: 16px;
     font-family: 'Barlow', sans-serif;
     font-weight: 700;
+}
+
+textarea {
+  width: 90%;
+  height: 80px;
+  padding: 10px 10px;
+  box-sizing: border-box;
+  border: 2px solid #373434;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+
+
+input {
+  width: 90%;
+  padding: 2px 2px;
+  margin: 2px 0;
+  box-sizing: border-box;
 }

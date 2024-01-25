@@ -8,6 +8,7 @@ import { Post } from './types/post';
   providedIn: 'root'
 })
 export class ApiService {
+  
 
   constructor(private http: HttpClient) { }
 
