@@ -1,9 +1,9 @@
 <section id="gallery">
     <h1>Catalogue</h1>
     <article class="gallery-container">
-        <!-- <div *ngIf="isLoading"> -->
-            <!-- <app-loader/> -->
-        <!-- </div> -->
+        <div *ngIf="isLoading">
+            <app-loader/>
+        </div>
         <!--If there are art publications in the database, show each of them-->
         <article *ngFor="let theme of themesList"class="card-info">
             <article class="card-info-image">
