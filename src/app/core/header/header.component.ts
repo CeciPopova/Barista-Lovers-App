@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
-  isLoggedIn:boolean = true;
+  isLoggedIn:boolean = false;
 
   
 }

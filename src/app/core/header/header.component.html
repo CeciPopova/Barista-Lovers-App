@@ -1,22 +1,22 @@
 <nav>
   <!-- Do not forget to change the path to the image -->
   <img src="../../../assets/images/Creative-coffee-logo-design-vectors-03.jpg" alt="logo">
-  <h2><a href="/home">Barista Lovers</a></h2>
-  <a href="/about">About us</a>
+  <h2><a routerLink="/home">Barista Lovers</a></h2>
+  <a routerLink="/about">About us</a>
   <div class="menu">
 
     <ul *ngIf="isLoggedIn">
-      <li><a href="/catalogue">Catalogue</a></li>
+      <li><a routerLink="/catalogue">Catalogue</a></li>
       <!-- Logged users -->
-      <li><a href="/new-item">Create a Recipe</a></li>
-      <li><a href="/profile">Profile</a></li>
-      <li><a href="/logout">Logout</a></li>
+      <li><a routerLink="/new-item">Create a Recipe</a></li>
+      <li><a routerLink="/profile">Profile</a></li>
+      <li><a routerLink="/logout">Logout</a></li>
     </ul>
     <ul *ngIf="!isLoggedIn">
       <li><a href="/catalogue">Catalogue</a></li>
       <!-- Guest users -->
-      <li><a href="/login">Login</a></li>
-      <li><a href="/register">Register</a></li>
+      <li><a routerLink="/login">Login</a></li>
+      <li><a routerLink="/register">Register</a></li>
     </ul>
   </div>
 </nav>
