@@ -10,7 +10,7 @@ export class AuthActivate implements CanActivate{
 
     constructor(private userService: UserService) {}
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
-        throw new Error("Method not implemented.");
+        return this.userService.isLoggedIn;
     }
 
 }

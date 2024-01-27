@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { NewItemComponent } from './new-item/new-item.component';
 import { ItemDetailsComponent } from './item-details/item-details.component';
 import { EditItemComponent } from './edit-item/edit-item.component';
+import { AuthActivate } from '../core/guargs/auth.activate';
 
 const routes: Routes = [
   {
@@ -12,6 +13,7 @@ const routes: Routes = [
   {
     path: 'new-item',
     component: NewItemComponent,
+    canActivate: [AuthActivate]
   },
   {
     path: 'edit-item',
