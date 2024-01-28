@@ -4,26 +4,33 @@ import { NewItemComponent } from './new-item/new-item.component';
 import { ItemDetailsComponent } from './item-details/item-details.component';
 import { EditItemComponent } from './edit-item/edit-item.component';
 import { AuthActivate } from '../core/guargs/auth.activate';
+import { CatalogueComponent } from '../catalogue/catalogue.component';
 
 const routes: Routes = [
   {
-    path: 'item-details',
-    component: ItemDetailsComponent
+    path: 'themes',
+    children: [
+      {
+        path: '',
+        pathMatch: 'full',
+        component: CatalogueComponent,
+      },
+      {
+        path: ':themeId',
+        component: ItemDetailsComponent,
+      },
+    ],
   },
+
   {
-    path: 'new-item',
+    path: 'add-theme',
     component: NewItemComponent,
-    canActivate: [AuthActivate]
+    canActivate: [AuthActivate],
   },
-  {
-    path: 'edit-item',
-    component: EditItemComponent,
-  },
-]
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
 export class ItemsRoutingModule {}
- 

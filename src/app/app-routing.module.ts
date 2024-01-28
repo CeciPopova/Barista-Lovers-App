@@ -2,15 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
-import { LoginComponent } from './user/login/login.component';
-import { RegisterComponent } from './user/register/register.component';
-import { ProfileComponent } from './user/profile/profile.component';
 import { CatalogueComponent } from './catalogue/catalogue.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { NewItemComponent } from './items/new-item/new-item.component';
-import { ItemDetailsComponent } from './items/item-details/item-details.component';
-import { EditItemComponent } from './items/edit-item/edit-item.component';
-
 
 const routes: Routes = [
   {
@@ -22,42 +15,22 @@ const routes: Routes = [
     path: 'home',
     component: HomeComponent,
   },
-   {
-     path: 'about',
-     component: AboutComponent,
-   },
   {
-     path: 'login',
-     component: LoginComponent,
-   },
-   {
-     path: 'register',
-     component: RegisterComponent,
-   },
-   {
-     path: 'profile',
-     component: ProfileComponent,
-   },
-   {
-     path: 'catalogue',
-     component: CatalogueComponent,
-   },
-   {
-    path: 'new-item',
-    component: NewItemComponent,
-  },
-   {
-    path: 'edit',
-    component: EditItemComponent,
+    path: 'about',
+    component: AboutComponent,
   },
   {
-    path: 'details',
-    component: ItemDetailsComponent,
+    path: 'catalogue',
+    component: CatalogueComponent,
   },
   {
-    path: '**',
-    component: NotFoundComponent,
+    path: 'auth',
+    loadChildren: () => import('./user/user.module').then((m) => m.UserModule),
   },
+  // {
+    // path: '**',
+    // component: NotFoundComponent,
+  // },
 ];
 
 @NgModule({
@@ -65,4 +38,3 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
- 

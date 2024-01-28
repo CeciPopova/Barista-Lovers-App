@@ -11,25 +11,30 @@ div {
   text-align: center;
   }
 
-  li {
-    margin: auto;
-    width: 640px; 
-    padding: 50px;
-    font-family: 'Lexend Deca', sans-serif; 
-    color: #fbfaf4;    
-  }
   
 .content h1 {
     font-size: 40px;
-    padding: 50px;
+    padding: 30px;
 }
 
 a {
   color: #dcd23c;
 }
+a:hover {
+  text-decoration: underline;
+}
 
 h2 {
   font-size: 29px;
   margin-bottom: 0%;
+  padding: 20px;
+}
+
+h3 {
+  margin: auto;
+width: 640px; 
+padding: 30px;
+font-family: 'Lexend Deca', sans-serif; 
+color: #fbfaf4;    
 }
 

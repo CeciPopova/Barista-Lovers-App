@@ -9,7 +9,7 @@ import { ItemDetailsComponent } from './item-details/item-details.component';
 @NgModule({
   declarations: [NewItemComponent, EditItemComponent, ItemDetailsComponent],
   imports: [
-    CommonModule, ItemsRoutingModule,
+    CommonModule, ItemsRoutingModule
   ],
   exports: [NewItemComponent, EditItemComponent, ItemDetailsComponent]
 })
