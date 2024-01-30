@@ -5,7 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ProfileComponent } from './profile/profile.component';
 import { CoreModule } from '../core/core.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 
 
@@ -13,7 +13,7 @@ import { SharedModule } from '../shared/shared.module';
 @NgModule({
   declarations: [LoginComponent, RegisterComponent, ProfileComponent],
   imports: [
-    CommonModule, UserRoutingModule, CoreModule, FormsModule, SharedModule
+    CommonModule, UserRoutingModule, CoreModule, FormsModule, SharedModule, ReactiveFormsModule,
   ],
   exports:[LoginComponent, RegisterComponent, ProfileComponent]
 })
