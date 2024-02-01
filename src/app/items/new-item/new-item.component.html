@@ -1,33 +1,103 @@
 <div id="box">
-    <section id="create-container">
-        <div class="create-container-info">
-            <!-- Do not forget to change the path to the image -->
-            <img src="../../../assets/images/1040747.jpg" alt="image">
-            <form action="#" method="" class="container-text">
-                <h2>Create Recipe</h2>
-                
-                <p>
-                    <label for="title">Title:</label>
-                    <input type="text" id="title" placeholder="Home made cappuccino" name="" value="">
-                </p>
-                <p>
-                    <label for="description">Description:</label>
-                    <textarea type="text" id="description" placeholder=" Cappuccino is equal parts espresso, steamed and foamed milk, and is a favorite drink for many coffee lovers." name="" value=""></textarea>
-                </p>
-                <p>
-                    <label for="ingredients">Ingredients:</label>
-                    <textarea type="text" id="ingredients" placeholder="espresso, steamed and foamed milk" name="" value=""></textarea>
-                </p>
-                <p>
-                    <label for="picture">Picture:</label>
-                    <input type="text" id="picture" placeholder="../../../assets/images/download.jpeg" name="" value="">
-                </p>
-                <p>
-                    <label for="name">Barista</label>
-                    <input type="name" id="name" placeholder="Ceci Popova" name="" value="">
-                </p>
-                <button class="create-btn">Create</button>
-            </form>
-        </div>
-    </section>
+  <section id="create-container">
+    <div class="create-container-info">
+      <!-- Do not forget to change the path to the image -->
+      <img src="../../../assets/images/1040747.jpg" alt="image" />
+      <form
+        class="container-text"
+        #form="ngForm"
+        (ngSubmit)="newItemSubmitHandler(form)"
+      >
+        <h2>Create Recipe</h2>
+
+        <p>
+          <label for="title">Title:</label>
+          <input
+            type="text"
+            id="title"
+            placeholder="Home made cappuccino"
+            name="themeName"
+            value=""
+            ngModel
+            #inputName="ngModel"
+            required
+            minlength="3"
+          />
+        </p>
+        <ng-container *ngIf="inputName.touched">
+          <p class="error" *ngIf="inputName.errors?.['required']">
+            Title is required!
+          </p>
+          <p class="error" *ngIf="inputName.errors?.['minlength']">
+            Title must be at least 3 characters!
+          </p>
+        </ng-container>
+        <p>
+          <label for="description">Description:</label>
+          <textarea
+            type="text"
+            id="description"
+            placeholder=" Cappuccino is equal parts espresso, steamed and foamed milk, and is a favorite drink for many coffee lovers."
+            name="text"
+            value=""
+            ngModel
+            #textAreainput="ngModel"
+            required
+            minlength="10"
+          ></textarea>
+        </p>
+        <ng-container *ngIf="textAreainput.touched">
+            <p class="error" *ngIf="textAreainput.errors?.['required']">
+              Description is required!
+            </p>
+            <p class="error" *ngIf="textAreainput.errors?.['minlength']">
+              Description must be at least 10 characters!
+            </p>
+          </ng-container>
+        <p>
+          <label for="ingredients">Ingredients:</label>
+          <textarea
+            type="text"
+            id="ingredients"
+            placeholder="espresso, steamed and foamed milk"
+            name="text"
+            value=""
+            ngModel
+            #ingredientsInput="ngModel"
+            required
+            minlength="10"
+          ></textarea>
+        </p>
+        <ng-container *ngIf="ingredientsInput.touched">
+            <p class="error" *ngIf="ingredientsInput.errors?.['required']">
+              Ingredients are required!
+            </p>
+            <p class="error" *ngIf="ingredientsInput.errors?.['minlength']">
+              Ingredients must be at least 3 characters!
+            </p>
+          </ng-container>
+        <p>
+          <label for="picture">Picture:</label>
+          <input
+            type="text"
+            id="picture"
+            placeholder="../../../assets/images/download.jpeg"
+            name=""
+            value=""
+          />
+        </p>
+        <p>
+          <label for="name">Barista</label>
+          <input
+            type="name"
+            id="name"
+            placeholder="Ceci Popova"
+            name=""
+            value=""
+          />
+        </p>
+        <button class="create-btn">Create</button>
+      </form>
+    </div>
+  </section>
 </div>
