@@ -1,5 +1,5 @@
 import { Post } from "./post";
-import { UserId } from "./user";
+import { UserId } from "./userId";
 
 
 
