@@ -9,7 +9,6 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { CoreModule } from './core/core.module';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from './shared/shared.module';
-import { UserModule } from './user/user.module';
 import { ItemsModule } from './items/items.module';
 import { appInterceptorProvider } from './app.interceptor';
 
@@ -27,7 +26,6 @@ import { appInterceptorProvider } from './app.interceptor';
     CoreModule,
     SharedModule,
     HttpClientModule,
-    UserModule,
     ItemsModule,
   ],
   providers: [appInterceptorProvider],
