@@ -9,7 +9,7 @@
       <li><a routerLink="/catalogue">Catalogue</a></li>
       <!-- Logged users -->
       <li><a routerLink="/add-theme">Create a Recipe</a></li>
-      <li><a routerLink="/auth/profile">{{ firstName }}'s Profile</a></li>
+      <li><a routerLink="/auth/profile">{{ username }}'s Profile</a></li>
       <li (click)="logout()"><a >Logout</a></li>
     </ul>
     <ul *ngIf="!isLoggedIn">
