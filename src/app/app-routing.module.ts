@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { CatalogueComponent } from './catalogue/catalogue.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { ErrorComponent } from './core/error/error.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'auth',
     loadChildren: () => import('./user/user.module').then((m) => m.UserModule),
+  },
+  {
+    path: 'error',
+    component: ErrorComponent,
   },
   {
     path: '**',
