@@ -10,7 +10,7 @@
                 <img src="../../assets/images/barista-coffee-crema-cup.jpg" alt="art-image">
             </article>
             <article class="card-info-text">
-                <h2>Title: {{theme.themeName}}</h2>
+                <h2>Title: {{theme.themeName | slice : 20}}</h2>
                 <h3>Certificate of authenticity: No</h3>
                 <a routerLink="/themes/{{theme._id}}" class="details-btn">Details</a>
             </article>
