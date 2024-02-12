@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from './shared/shared.module';
 import { ItemsModule } from './items/items.module';
 import { appInterceptorProvider } from './app.interceptor';
+import { AuthenticateComponent } from './authenticate/authenticate.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { appInterceptorProvider } from './app.interceptor';
     AboutComponent,
     CatalogueComponent,
     NotFoundComponent,
+    AuthenticateComponent,
   ],
   imports: [
     BrowserModule,
