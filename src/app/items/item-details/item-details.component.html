@@ -1,11 +1,11 @@
-<section id="details-page" *ngIf="theme">
+<section id="details-page" *ngIf="recipe">
     <h1>Recipe Details</h1>
     <article class="details-card">
         <article class="details-card-text">
-            <h2>Title:<br>{{theme.themeName}}</h2>
-            <h3>Author: {{theme.userId}}</h3>
-            <h3>Painting technique: Oil paints</h3>
-            <h3>Certificate of authenticity: Yes</h3>
+            <h2>Title:<br>{{recipe?.name}}</h2>
+            <h3>Author: {{recipe._ownerId}}</h3>
+            <h3>Ingredients: {{recipe.ingredients}}</h3>
+        
 
             <!-- If there is no registered user, do not display buttons-->
             <div class="buttons" *ngIf="isLoggedIn">

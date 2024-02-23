@@ -8,7 +8,7 @@ import { CatalogueComponent } from '../catalogue/catalogue.component';
 
 const routes: Routes = [
   {
-    path: 'themes',
+    path: 'recipes',
     children: [
       {
         path: '',
@@ -16,7 +16,7 @@ const routes: Routes = [
         component: CatalogueComponent,
       },
       {
-        path: ':themeId',
+        path: ':_id',
         component: ItemDetailsComponent,
       },
     ],

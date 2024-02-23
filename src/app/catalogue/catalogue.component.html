@@ -5,14 +5,14 @@
             <app-loader/>
         </div>
         <!--If there are art publications in the database, show each of them-->
-        <article *ngFor="let theme of themesList"class="card-info">
+        <article *ngFor="let recipe of recipeList"class="card-info">
             <article class="card-info-image">
-                <img src="../../assets/images/barista-coffee-crema-cup.jpg" alt="art-image">
+                <img src="{{recipe.img}}" alt="art-image">
             </article>
             <article class="card-info-text">
-                <h2>Title: {{theme.themeName}}</h2>
-                <h3>Certificate of authenticity: No</h3>
-                <a routerLink="/themes/{{theme._id}}" class="details-btn">Details</a>
+                <h2>Title: {{recipe.name}}</h2>
+                <h3>Autor: {{recipe._ownerId}}</h3>
+                <a routerLink="/recipes/{{recipe._id}}" class="details-btn">Details</a>
             </article>
         </article>
         

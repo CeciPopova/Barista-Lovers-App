@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Theme } from '../../types/theme';
+import { Recipe } from '../../types/recipe';
 import { ApiService } from '../../api.service';
 import { ActivatedRoute } from '@angular/router';
 import { Post } from '../../types/post';
@@ -11,7 +11,7 @@ import { UserService } from '../../user/user.service';
   styleUrl: './item-details.component.css',
 })
 export class ItemDetailsComponent implements OnInit {
-  theme: Theme | undefined;
+  recipe: Recipe | undefined;
   post: Post | undefined;
 
   constructor(
@@ -24,7 +24,7 @@ export class ItemDetailsComponent implements OnInit {
     return this.userService.isLoggedIn;
   }
   ngOnInit(): void {
-    this.fetchTheme();
+    this.fetchRecipe();
   }
 
   fetchPost(): void {
@@ -35,12 +35,12 @@ export class ItemDetailsComponent implements OnInit {
     });
   }
 
-  fetchTheme(): void {
-    const id = this.activatedRoute.snapshot.params['themeId'];
+  fetchRecipe(): void {
+    const id = this.activatedRoute.snapshot.params['_id'];
 
-    this.apiService.getTheme(id).subscribe((theme) => {
-      this.theme = theme;
-      console.log(theme);
+    this.apiService.getTheme(id).subscribe((recipe) => {
+      this.recipe = recipe;
+      console.log(recipe);
     });
   }
 }

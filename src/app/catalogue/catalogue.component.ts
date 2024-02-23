@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
-import { Theme } from '../types/theme';
+import { Recipe } from '../types/recipe';
 import { Post } from '../types/post';
 
 @Component({
@@ -10,7 +10,7 @@ import { Post } from '../types/post';
 })
 export class CatalogueComponent implements OnInit{
 
-  themesList: Theme[] = [];
+  recipeList: Recipe[] = [];
   postsList: Post[] = [];
 
   isLoading: boolean = true;
@@ -20,11 +20,11 @@ export class CatalogueComponent implements OnInit{
 
   ngOnInit(): void {
     this.apiService.getThemes().subscribe({
-      next: (themes) => {
-        console.log({themes});
-        this.themesList = themes;
+      next: (recipes) => {
+        console.log({recipes});
+        this.recipeList = recipes;
         this.isLoading = false;
-        if (this.themesList.length === 0) {
+        if (this.recipeList.length === 0) {
           this.thereAreNoThemes = true
         }
       },
