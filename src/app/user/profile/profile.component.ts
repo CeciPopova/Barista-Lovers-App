@@ -12,7 +12,7 @@ export class ProfileComponent {
   constructor(private userService: UserService) {}
 
   get userName(): string {
-    return this.userService.user?.firstName || '';
+    return this.userService.user?.username || '';
   }
 
   get userEmail(): string {

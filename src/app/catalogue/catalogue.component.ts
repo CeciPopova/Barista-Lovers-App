@@ -34,17 +34,17 @@ export class CatalogueComponent implements OnInit{
       }
     })
 
-    this.apiService.getPosts().subscribe({
-      next: (posts) => {
-        console.log({posts});
-        this.postsList = posts;
-        this.isLoading = false;
-      },
-      error: (err) => {
-        this.isLoading = false;
-        console.error(`Error: ${err}`)
-      }
-    })
+    // this.apiService.getPosts().subscribe({
+      // next: (posts) => {
+        // console.log({posts});
+        // this.postsList = posts;
+        // this.isLoading = false;
+      // },
+      // error: (err) => {
+        // this.isLoading = false;
+        // console.error(`Error: ${err}`)
+      // }
+    // })
     
   }
 }

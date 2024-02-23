@@ -19,7 +19,7 @@ export class ApiService {
 
   getThemes() {
     const {apiUrl} = environment;
-    return this.http.get<Theme[]>(`${apiUrl}/themes`);
+    return this.http.get<Theme[]>(`${apiUrl}/data/recipes`);
   }
 
   getPost(id: string) {
@@ -32,5 +32,8 @@ export class ApiService {
     return this.http.get<Post[]>(`${apiUrl}/posts`);
   }
 
-
+  createTheme(themeName: string, postText: string) {
+    return this.http.post<Theme>('/api/themes', {themeName, postText});
+  }
+  
 }

@@ -1,34 +1,62 @@
 <main>
-    <section id="login-container">
-        <div class="container">
-            <!-- Do not forget to change the path to the image -->
-            <img src="../../../assets/images/85984411d0281113179065628d9d061f.jpg" alt="image">
-            <form class="container-text" #form="ngForm" (ngSubmit)="login(form)">
-                <h2>Login</h2>
-                <p>Welcome, see the new masterpieces!</p>
-                <label for="username">Username:</label>
-                <input type="username" id="username" placeholder="ivan_00" name="username" #inputUsername="ngModel"
-                    ngModel required minlength="5">
-                <ng-container *ngIf="inputUsername.touched">
-                    <p class="error" *ngIf="inputUsername.errors?.['required']">Username is required!</p>
-                    <p class="error" *ngIf="inputUsername.errors?.['minlength']">Username must be at least 5 characters!
-                    </p>
-                </ng-container>
+  <section id="login-container">
+    <div class="container">
+      <!-- Do not forget to change the path to the image -->
+      <img
+        src="../../../assets/images/85984411d0281113179065628d9d061f.jpg"
+        alt="image"
+      />
+      <form class="container-text" #form="ngForm" (ngSubmit)="login(form)">
+        <h2>Login</h2>
+        <p>Welcome, see the new masterpieces!</p>
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="ivan_00"
+          name="email"
+          #inputEmail="ngModel"
+          ngModel
+          required
+          minlength="5"
+    
+        />
+        <ng-container *ngIf="inputEmail.touched">
+          <p class="error" *ngIf="inputEmail.errors?.['required']">
+            Email is required!
+          </p>
+          <!-- <p class="error" *ngIf="inputEmail.errors?.['appEmailValidator']"> -->
+            <!-- Email is not valid! -->
+          <!-- </p> -->
+        </ng-container>
 
-                <label for="password">Password:</label>
-                <input type="password" id="password" placeholder="*****" name="password" #inputPassword="ngModel"
-                    ngModel required minlength="5">
-                <ng-container *ngIf="inputPassword.touched">
-                    <p class="error" *ngIf="inputPassword.errors?.['required']">Password is required!</p>
-                    <p class="error" *ngIf="inputPassword.errors?.['minlength']">Password must be at least 5 characters!
-                    </p>
-                </ng-container>
-                <button class="login-btn">Login</button>
-                <div class="card-no-account">
-                    <p>Don't have an account? <a routerLink="/auth/register">Sign up</a>.</p>
-                </div>
-            </form>
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          placeholder="*****"
+          name="password"
+          #inputPassword="ngModel"
+          ngModel
+          required
+          minlength="5"
+        />
+        <ng-container *ngIf="inputPassword.touched">
+          <p class="error" *ngIf="inputPassword.errors?.['required']">
+            Password is required!
+          </p>
+          <p class="error" *ngIf="inputPassword.errors?.['minlength']">
+            Password must be at least 5 characters!
+          </p>
+        </ng-container>
+        <button class="login-btn">Login</button>
+        <div class="card-no-account">
+          <p>
+            Don't have an account? <a routerLink="/auth/register">Sign up</a>.
+          </p>
         </div>
-    </section>
+      </form>
+    </div>
+  </section>
 </main>
 <app-footer />

@@ -17,7 +17,6 @@
             id="title"
             placeholder="Home made cappuccino"
             name="themeName"
-            value=""
             ngModel
             #inputName="ngModel"
             required
@@ -38,8 +37,7 @@
             type="text"
             id="description"
             placeholder=" Cappuccino is equal parts espresso, steamed and foamed milk, and is a favorite drink for many coffee lovers."
-            name="text"
-            value=""
+            name="description"
             ngModel
             #textAreainput="ngModel"
             required
@@ -55,45 +53,13 @@
             </p>
           </ng-container>
         <p>
-          <label for="ingredients">Ingredients:</label>
-          <textarea
-            type="text"
-            id="ingredients"
-            placeholder="espresso, steamed and foamed milk"
-            name="text"
-            value=""
-            ngModel
-            #ingredientsInput="ngModel"
-            required
-            minlength="10"
-          ></textarea>
-        </p>
-        <ng-container *ngIf="ingredientsInput.touched">
-            <p class="error" *ngIf="ingredientsInput.errors?.['required']">
-              Ingredients are required!
-            </p>
-            <p class="error" *ngIf="ingredientsInput.errors?.['minlength']">
-              Ingredients must be at least 3 characters!
-            </p>
-          </ng-container>
         <p>
-          <label for="picture">Picture:</label>
+          <label for="image">Image:</label>
           <input
             type="text"
-            id="picture"
+            id="image"
             placeholder="../../../assets/images/download.jpeg"
-            name=""
-            value=""
-          />
-        </p>
-        <p>
-          <label for="name">Barista</label>
-          <input
-            type="name"
-            id="name"
-            placeholder="Ceci Popova"
-            name=""
-            value=""
+            name="image"
           />
         </p>
         <button class="create-btn">Create</button>

@@ -32,10 +32,10 @@ const routes: Routes = [
     path: 'error',
     component: ErrorComponent,
   },
-  {
-    path: '**',
-    component: NotFoundComponent,
-  },
+  // {
+    // path: '**',
+    // component: NotFoundComponent,
+  // },
 ];
 
 @NgModule({

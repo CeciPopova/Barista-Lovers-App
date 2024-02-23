@@ -3,17 +3,15 @@
   <img src="../../../assets/images/Creative-coffee-logo-design-vectors-03.jpg" alt="logo">
   <h2><a routerLink="/home">Barista Lovers</a></h2>
   <a routerLink="/about">About us</a>
+  <div><li><a routerLink="/catalogue">Catalogue</a></li></div>
   <div class="menu">
-
     <ul *ngIf="isLoggedIn">
-      <li><a routerLink="/catalogue">Catalogue</a></li>
       <!-- Logged users -->
       <li><a routerLink="/add-theme">Create a Recipe</a></li>
       <li><a routerLink="/auth/profile">{{ username }}'s Profile</a></li>
       <li (click)="logout()"><a >Logout</a></li>
     </ul>
     <ul *ngIf="!isLoggedIn">
-      <li><a href="/catalogue">Catalogue</a></li>
       <!-- Guest users -->
       <li><a routerLink="/auth/login">Login</a></li>
       <li><a routerLink="/auth/register">Register</a></li>

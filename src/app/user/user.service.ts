@@ -4,9 +4,7 @@ import { BehaviorSubject, Subscription, tap } from 'rxjs';
 
 interface User {
   email: string;
-  firstName: string;
   username: string;
-  // phoneNumber: string;
   // password: string;
 }
 
@@ -33,9 +31,9 @@ export class UserService implements OnDestroy {
     });
   }
 
-  login(username: string, password: string) {
+  login(email: string, password: string) {
     return this.http
-      .post<User>('/api/login', { username, password })
+      .post<User>('/api/users/login', { email, password })
       .pipe(tap((user) => this.user$$.next(user)));
   }
 
@@ -46,7 +44,7 @@ export class UserService implements OnDestroy {
     rePassword: string
   ) {
     return this.http
-      .post<User>('/api/register', {
+      .post<User>('/api/users/register', {
         username,
         email,
         password,
@@ -57,7 +55,7 @@ export class UserService implements OnDestroy {
 
   logout() {
     return this.http
-      .post<User>('/api/logout', {})
+      .post<User>('/api/users/logout', {})
       .pipe(tap(() => this.user$$.next(undefined)));
   }
 
